@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Malla Curricular - Tecnólogo Químico</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Malla Curricular - Tecnólogo Químico</h1>
+
+  <div class="malla">
+    <!-- Primer Semestre -->
+    <div class="semestre">
+      <h3>1er Semestre</h3>
+      <button class="materia" data-nombre="Química Analítica I">Química Analítica I</button>
+      <button class="materia" data-nombre="Fisicoquímica">Fisicoquímica</button>
+      <button class="materia" data-nombre="Microbiología General">Microbiología General</button>
+      <button class="materia" data-nombre="Introd. a la Química Industrial">Introd. a la Química Industrial</button>
+      <button class="materia" data-nombre="Estadística">Estadística</button>
+      <button class="materia" data-nombre="Economía">Economía</button>
+      <button class="materia" data-nombre="Inglés I">Inglés I</button>
+    </div>
+
+    <!-- Segundo Semestre -->
+    <div class="semestre">
+      <h3>2do Semestre</h3>
+      <button class="materia" data-nombre="Matemática I" data-previaturas="Estadística">Matemática I</button>
+      <button class="materia" data-nombre="Laboratorio Química I" data-previaturas="Química Analítica I">Laboratorio Química I</button>
+      <button class="materia" data-nombre="Química Orgánica I" data-previaturas="Fisicoquímica">Química Orgánica I</button>
+      <button class="materia" data-nombre="Inglés II" data-previaturas="Inglés I">Inglés II</button>
+    </div>
+
+    <!-- Podés seguir agregando años/semestres iguales -->
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -37,22 +37,23 @@ h1 {
   padding: 0.4rem;
   margin: 0.3rem 0;
   border-radius: 6px;
-  background-color: #ede7f6;
+  background-color: #f3e5f5; /* lila pálido para todas */
   cursor: pointer;
   transition: 0.2s ease;
 }
 
 .subject.unlocked {
-  background-color: #d1c4e9;
+  background-color: #d1c4e9; /* lila más oscuro */
 }
 
 .subject.completed {
   text-decoration: line-through;
-  background-color: #f3e5f5;
+  background-color: #e1bee7; /* lila para tachado */
   color: #a1887f;
 }
+
 .subject.locked {
-  background-color: #e0e0e0;
-  color: #aaa;
-  pointer-events: none;
+  background-color: #f3e5f5; /* lila pálido en lugar de gris */
+  color: #b288c0;
+  cursor: default;
 }

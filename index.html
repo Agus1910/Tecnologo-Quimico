@@ -2,37 +2,79 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Malla Curricular - Tecnólogo Químico</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Malla Curricular Tecnólogo Químico</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <h1>Malla Curricular - Tecnólogo Químico</h1>
+  <h1>Malla Curricular Tecnólogo Químico</h1>
 
-  <div class="malla">
-    <!-- Primer Semestre -->
-    <div class="semestre">
-      <h3>1er Semestre</h3>
-      <button class="materia" data-nombre="Química Analítica I">Química Analítica I</button>
-      <button class="materia" data-nombre="Fisicoquímica">Fisicoquímica</button>
-      <button class="materia" data-nombre="Microbiología General">Microbiología General</button>
-      <button class="materia" data-nombre="Introd. a la Química Industrial">Introd. a la Química Industrial</button>
-      <button class="materia" data-nombre="Estadística">Estadística</button>
-      <button class="materia" data-nombre="Economía">Economía</button>
-      <button class="materia" data-nombre="Inglés I">Inglés I</button>
-    </div>
+  <div class="bloque">
+    <div class="titulo-bloque">Primer Año - Anuales (sin previaturas)</div>
+    <ul>
+      <li>Microbiología general</li>
+      <li>Fisicoquímica</li>
+      <li>Química Analítica 1</li>
+      <li>Int. Química Industrial</li>
+      <li>Inglés 1</li>
+    </ul>
+  </div>
 
-    <!-- Segundo Semestre -->
-    <div class="semestre">
-      <h3>2do Semestre</h3>
-      <button class="materia" data-nombre="Matemática I" data-previaturas="Estadística">Matemática I</button>
-      <button class="materia" data-nombre="Laboratorio Química I" data-previaturas="Química Analítica I">Laboratorio Química I</button>
-      <button class="materia" data-nombre="Química Orgánica I" data-previaturas="Fisicoquímica">Química Orgánica I</button>
-      <button class="materia" data-nombre="Inglés II" data-previaturas="Inglés I">Inglés II</button>
-    </div>
+  <div class="bloque">
+    <div class="titulo-bloque">Primer Año - Primer Semestre (sin previaturas)</div>
+    <ul>
+      <li>Economía</li>
+      <li>Estadística</li>
+    </ul>
+  </div>
 
-    <!-- Podés seguir agregando años/semestres iguales -->
+  <div class="bloque">
+    <div class="titulo-bloque">Primer Año - Segundo Semestre</div>
+    <ul>
+      <li>Legislación laboral <span class="previa">(sin previaturas)</span></li>
+      <li>Control de calidad <span class="previa">(previa: Estadística)</span></li>
+      <li>Análisis de Aguas (optativa) <span class="previa">(sin previaturas)</span></li>
+    </ul>
+  </div>
 
+  <div class="bloque">
+    <div class="titulo-bloque">Segundo Año - Anuales</div>
+    <ul>
+      <li>Análisis microbiológico <span class="previa">(previas: Microbiología general, Química Analítica 1)</span></li>
+      <li>Química Analítica 2 <span class="previa">(previas: Química Analítica 1, Estadística)</span></li>
+      <li>Gestión ambiental y ecología <span class="previa">(previa: Int. Química Industrial)</span></li>
+      <li>Inglés 2 <span class="previa">(previa: Inglés 1)</span></li>
+    </ul>
+  </div>
+
+  <div class="bloque">
+    <div class="titulo-bloque">Segundo Año - Primer Semestre</div>
+    <ul>
+      <li>Gestión de calidad <span class="previa">(previa: Control de calidad)</span></li>
+      <li>Seguridad industrial <span class="previa">(previa: Int. Química Industrial)</span></li>
+      <li>Int. Industria Farmacéutica (optativa) <span class="previa">(previas: Microbiología general, Int. Química Industrial)</span></li>
+    </ul>
+  </div>
+
+  <div class="bloque">
+    <div class="titulo-bloque">Segundo Año - Segundo Semestre</div>
+    <ul>
+      <li>Higiene industrial <span class="previa">(previa: Int. Química Industrial)</span></li>
+    </ul>
+  </div>
+
+  <div class="bloque">
+    <div class="titulo-bloque">Tercer Año - Primer Semestre</div>
+    <ul>
+      <li>Control de calidad en industria farmacéutica (optativa) <span class="previa">(previas: Química Analítica 1, Química Analítica 2, Control de calidad, Int. Industria Farmacéutica)</span></li>
+    </ul>
+  </div>
+
+  <div class="bloque">
+    <div class="titulo-bloque">Tercer Año - Segundo Semestre</div>
+    <ul>
+      <li>Pasantía <span class="previa">(sin previaturas)</span></li>
+    </ul>
   </div>
 
   <script src="script.js"></script>

@@ -1,57 +1,52 @@
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #fff7fa;
-  color: #4a4a4a;
-  text-align: center;
-  padding: 2rem;
+  font-family: 'Arial', sans-serif;
+  background-color: #fff0f3;
+  color: #800020; /* vino oscuro */
+  margin: 20px;
+  padding: 0;
 }
 
 h1 {
-  margin-bottom: 2rem;
-  color: #d25c96;
+  text-align: center;
+  color: #b14a5d;
+  margin-bottom: 30px;
 }
 
-.malla {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
+.bloque {
+  background-color: #f8d7da; /* rosado pálido */
+  border-radius: 8px;
+  margin: 15px auto;
+  padding: 15px 25px;
+  max-width: 600px;
+  box-shadow: 0 0 8px #d9a0aa;
 }
 
-.semestre {
-  background-color: #ffeaf4;
-  padding: 1rem 1.5rem;
-  border-radius: 1rem;
-  width: 240px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+.titulo-bloque {
+  font-weight: 700;
+  font-size: 1.3em;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #d96b85;
+  padding-bottom: 6px;
 }
 
-.semestre h3 {
-  margin-bottom: 1rem;
-  color: #c94a87;
+ul {
+  margin-top: 0;
+  padding-left: 20px;
 }
 
-.materia {
-  display: block;
-  width: 100%;
-  margin: 0.5rem 0;
-  padding: 0.6rem;
-  border: none;
-  border-radius: 0.8rem;
-  background-color: #f9b8d0;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
+.previas, .previa {
+  font-style: italic;
+  font-size: 0.9em;
+  color: #b14a5d;
 }
 
-.materia:disabled {
-  background-color: #f3cfe0;
-  cursor: not-allowed;
-}
-
+/* Materia aprobada: tachado y color más pálido */
 .aprobada {
+  color: #f2d7db;
   text-decoration: line-through;
-  background-color: #ffeaf4 !important;
-  color: #c27ba0 !important;
+  cursor: pointer;
+}
+
+li {
+  cursor: pointer;
 }

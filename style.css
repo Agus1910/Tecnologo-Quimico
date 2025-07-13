@@ -1,0 +1,65 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fdfaf3;
+  color: #227d6f;
+  margin: 0;
+  padding: 2rem;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+}
+
+h1, h2 {
+  color: #227d6f;
+}
+
+.bloque {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 10px;
+  margin-bottom: 2rem;
+}
+
+.materia {
+  background-color: #c8f3e0;
+  border-radius: 12px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+
+.materia.aprobada {
+  background-color: #b2dfc5;
+  text-decoration: line-through;
+  color: #6e9f90;
+}
+
+.materia.bloqueada {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+#progreso {
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.barra-container {
+  background-color: #e0dcd3;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 20px;
+  margin-top: 8px;
+}
+
+.barra {
+  height: 100%;
+  background-color: #3ac199;
+  width: 0%;
+  transition: width 0.5s ease;
+}

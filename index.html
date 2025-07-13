@@ -3,12 +3,61 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Malla Curricular Tecnólogo Químico</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>Malla Curricular - Tecnólogo Químico</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Malla Curricular Tecnólogo Químico</h1>
-  <div id="grid"></div>
+  <div class="container">
+    <h1>Malla Curricular - Tecnólogo Químico</h1>
+    <div id="progreso">
+      Créditos aprobados: <span id="creditosAprobados">0</span> / 226
+      <div class="barra-container">
+        <div class="barra" id="barraProgreso"></div>
+      </div>
+    </div>
+
+    <!-- Primer Año -->
+    <section>
+      <h2>Primer Año</h2>
+      <div class="bloque">
+        <div class="materia" data-creditos="13">Microbiología General</div>
+        <div class="materia" data-creditos="18">Fisicoquímica</div>
+        <div class="materia" data-creditos="23">Química Analítica 1</div>
+        <div class="materia" data-creditos="15">Int. Química Industrial</div>
+        <div class="materia" data-creditos="6">Inglés 1</div>
+        <div class="materia" data-creditos="3">Economía</div>
+        <div class="materia" data-creditos="8">Estadística</div>
+        <div class="materia" data-creditos="2">Legislación Laboral</div>
+        <div class="materia" data-creditos="4" data-previas="Estadística">Control de Calidad</div>
+        <div class="materia" data-creditos="5">Análisis de Aguas (Optativa)</div>
+      </div>
+    </section>
+
+    <!-- Segundo Año -->
+    <section>
+      <h2>Segundo Año</h2>
+      <div class="bloque">
+        <div class="materia" data-creditos="20" data-previas="Microbiología General,Química Analítica 1">Análisis Microbiológico</div>
+        <div class="materia" data-creditos="23" data-previas="Química Analítica 1,Estadística">Química Analítica 2</div>
+        <div class="materia" data-creditos="6" data-previas="Int. Química Industrial">Gestión Ambiental y Ecología</div>
+        <div class="materia" data-creditos="6" data-previas="Inglés 1">Inglés 2</div>
+        <div class="materia" data-creditos="4" data-previas="Control de Calidad">Gestión de Calidad</div>
+        <div class="materia" data-creditos="4" data-previas="Int. Química Industrial">Seguridad Industrial</div>
+        <div class="materia" data-creditos="5" data-previas="Microbiología General,Int. Química Industrial">Int. Industria Farmacéutica (Optativa)</div>
+        <div class="materia" data-creditos="4" data-previas="Int. Química Industrial">Higiene Industrial</div>
+      </div>
+    </section>
+
+    <!-- Tercer Año -->
+    <section>
+      <h2>Tercer Año</h2>
+      <div class="bloque">
+        <div class="materia" data-creditos="5" data-previas="Química Analítica 1,Química Analítica 2,Control de Calidad,Int. Industria Farmacéutica (Optativa)">Control de Calidad en Ind. Farmacéutica (Optativa)</div>
+        <div class="materia" data-creditos="16" data-previas="">Pasantía</div>
+      </div>
+    </section>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>

@@ -1,34 +1,23 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const materias = document.querySelectorAll(".materia");
-  const estado = JSON.parse(localStorage.getItem("estadoMaterias")) || {};
+document.addEventListener('DOMContentLoaded', () => {
+  const materias = document.querySelectorAll('li');
 
-  function actualizarEstado() {
-    materias.forEach(btn => {
-      const nombre = btn.dataset.nombre;
-      const previaturas = btn.dataset.previaturas?.split(",") || [];
+  materias.forEach(materia => {
+    const materiaText = materia.textContent.trim();
 
-      // Habilitar si no tiene previaturas o si todas están aprobadas
-      const habilitada = previaturas.every(p => estado[p]);
-      btn.disabled = !habilitada && !estado[nombre];
+    // Cargar estado guardado
+    if (localStorage.getItem(materiaText) === 'aprobada') {
+      materia.classList.add('aprobada');
+    }
 
-      // Estilo si está aprobada
-      if (estado[nombre]) {
-        btn.classList.add("aprobada");
+    // Click para toggle aprobado
+    materia.addEventListener('click', () => {
+      materia.classList.toggle('aprobada');
+
+      if (materia.classList.contains('aprobada')) {
+        localStorage.setItem(materiaText, 'aprobada');
       } else {
-        btn.classList.remove("aprobada");
+        localStorage.removeItem(materiaText);
       }
     });
-  }
-
-  materias.forEach(btn => {
-    const nombre = btn.dataset.nombre;
-
-    btn.addEventListener("click", () => {
-      estado[nombre] = !estado[nombre]; // Toggle
-      localStorage.setItem("estadoMaterias", JSON.stringify(estado));
-      actualizarEstado();
-    });
   });
-
-  actualizarEstado();
 });

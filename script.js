@@ -43,7 +43,7 @@ const subjects = {
   }
 };
 
-const completed = new Set(JSON.parse(localStorage.getItem("completedSubjects") || "[]"));
+let completed = new Set(JSON.parse(localStorage.getItem("completedSubjects") || "[]"));
 
 function createSubjectEl(subject) {
   const el = document.createElement("div");
@@ -57,13 +57,21 @@ function createSubjectEl(subject) {
     el.classList.add("completed");
   } else if (isUnlocked) {
     el.classList.add("unlocked");
+  } else {
+    el.classList.add("locked");
+  }
+
+  // Permitir marcar y desmarcar solo si está desbloqueada
+  if (isUnlocked || isCompleted) {
     el.addEventListener("click", () => {
-      completed.add(subject.name);
+      if (completed.has(subject.name)) {
+        completed.delete(subject.name);
+      } else {
+        completed.add(subject.name);
+      }
       localStorage.setItem("completedSubjects", JSON.stringify([...completed]));
       location.reload();
     });
-  } else {
-    el.classList.add("locked");
   }
 
   return el;
